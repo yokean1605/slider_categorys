@@ -66,6 +66,33 @@
                         <a href="" class="btn btn-primary m-2 btn-category">
                             Javascript
                         </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            PHP
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            HTML
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            CSS3
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            ReactJs
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            VueJs
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Grafix Designer
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Adobe Ilustrator
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Photoshop
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Corel Draw
+                        </a>
                     </div>
                 </div>
             </div>
@@ -81,13 +108,12 @@
         $(document).ready(function() {
             $('.scrollable').slick({
                 dots: false,
-                slidesToShow: 1,
-                slidesToScroll: 3,
-                swipeToSlide: true,
-                swipe: true,
+                swipe: false,
                 arrows: true,
                 infinite: false,
-                variableWidth: true
+                variableWidth: true,
+                slidesToShow: 10,
+                slidesToScroll: 4
             });
 
             $('.scrollable').on('afterChange', function(event, slick, currentSlide) {
