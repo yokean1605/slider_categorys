@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>List Category</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        .btn-category {
+            border-radius: 18px;
+        }
+        
+        .slick-arrow.slick-disabled {
+            display: none !important;
+        }
+        
+        .slick-prev:before,
+        .slick-next:before {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row bg-light">
+            <div class="col-9 mx-auto py-5">
+                <h3 class="text-center text-primary">List Category scroll</h3>
+                <div class="list-category py-2 my-3 border-top border-bottom">
+                    <div class="scrollable">
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            All
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Nobita Noby
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            One Piece
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Ghosts
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Naruto
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Boruto
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Laravel
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            CodeIgniter
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Phyton
+                        </a>
+                        <a href="" class="btn btn-primary m-2 btn-category">
+                            Javascript
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.scrollable').slick({
+                dots: false,
+                slidesToShow: 1,
+                slidesToScroll: 3,
+                swipeToSlide: true,
+                swipe: true,
+                arrows: true,
+                infinite: false,
+                variableWidth: true
+            });
+
+            $('.scrollable').on('afterChange', function(event, slick, currentSlide) {
+
+                if (currentSlide === 2) {
+                    $('.slick-next').addClass('hidden');
+                } else {
+                    $('.slick-next').removeClass('hidden');
+                }
+
+                if (currentSlide === 0) {
+                    $('.slick-prev').addClass('hidden');
+                } else {
+                    $('.slick-prev').removeClass('hidden');
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
